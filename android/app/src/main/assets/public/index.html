@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>FASHIN Play — Musik Streaming</title>
+  <meta name="description" content="FASHIN Play - Streaming musik online gratis dengan katalog lengkap">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-DwLuqkeG.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-FNRjumSb.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- Sidebar (Desktop) -->
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="18" fill="url(#logoGrad)" />
+            <path d="M16 12v16l12-8z" fill="white" />
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                <stop stop-color="#42A5F5" />
+                <stop offset="1" stop-color="#0D47A1" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">FASHIN Play</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#/home" class="nav-item active" data-page="home">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          <span>Beranda</span>
+        </a>
+        <a href="#/search" class="nav-item" data-page="search">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+          </svg>
+          <span>Cari</span>
+        </a>
+        <a href="#/favorites" class="nav-item" data-page="favorites">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+          <span>Favorit</span>
+        </a>
+        <a href="#/playlists" class="nav-item" data-page="playlists">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z" />
+          </svg>
+          <span>Playlist</span>
+        </a>
+
+        <div class="sidebar-spacer" style="flex:1"></div>
+
+        <a href="#/settings" class="nav-item" data-page="settings">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L5.09 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" />
+          </svg>
+          <span>Pengaturan</span>
+        </a>
+      </nav>
+
+      <div class="theme-toggle-container">
+        <label class="theme-toggle">
+          <input type="checkbox" id="theme-toggle-checkbox">
+          <span class="theme-toggle-slider">
+            <span class="theme-icon theme-icon-light">☀️</span>
+            <span class="theme-icon theme-icon-dark">🌙</span>
+          </span>
+        </label>
+        <span class="theme-toggle-label" id="theme-toggle-label">Light Mode</span>
+      </div>
+
+      <div class="sidebar-batik-accent"></div>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+      <div id="page-container" class="page-container">
+        <!-- Pages rendered here by router -->
+      </div>
+    </main>
+
+    <!-- Bottom Navigation (Mobile) -->
+    <nav id="bottom-nav" class="bottom-nav">
+      <a href="#/home" class="bottom-nav-item active" data-page="home">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="#/search" class="bottom-nav-item" data-page="search">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+        </svg>
+        <span>Search</span>
+      </a>
+      <a href="#/favorites" class="bottom-nav-item" data-page="favorites">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </svg>
+        <span>Favorites</span>
+      </a>
+      <a href="#/playlists" class="bottom-nav-item" data-page="playlists">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path
+            d="M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z" />
+        </svg>
+        <span>Playlists</span>
+      </a>
+    </nav>
+
+    <!-- Player Bar -->
+    <div id="player-bar" class="player-bar hidden">
+      <div class="player-progress-bar">
+        <div class="player-progress-fill" id="progress-fill"></div>
+        <input type="range" class="player-progress-input" id="progress-input" min="0" max="100" value="0">
+      </div>
+      <div class="player-bar-inner">
+        <div class="player-track-info" id="player-track-info">
+          <img class="player-album-art" id="player-album-art" src="" alt="">
+          <div class="player-track-text">
+            <span class="player-track-title" id="player-track-title">No Track</span>
+            <span class="player-track-artist" id="player-track-artist">—</span>
+          </div>
+          <button class="player-btn player-like-btn" id="player-like-btn" title="Like">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3z" />
+            </svg>
+          </button>
+        </div>
+        <div class="player-controls">
+          <button class="player-btn" id="btn-shuffle" title="Shuffle">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z" />
+            </svg>
+          </button>
+          <button class="player-btn" id="btn-prev" title="Previous">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+            </svg>
+          </button>
+          <button class="player-btn player-btn-play" id="btn-play" title="Play">
+            <svg viewBox="0 0 24 24" fill="currentColor" id="play-icon">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </button>
+          <button class="player-btn" id="btn-next" title="Next">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+            </svg>
+          </button>
+          <button class="player-btn" id="btn-repeat" title="Repeat">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z" />
+            </svg>
+          </button>
+        </div>
+        <div class="player-extras">
+          <button class="player-btn" id="btn-lyrics" title="Lyrics">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+            </svg>
+          </button>
+          <button class="player-btn" id="btn-eq" title="Equalizer">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z" />
+            </svg>
+          </button>
+          <div class="player-volume">
+            <button class="player-btn" id="btn-volume" title="Volume">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+              </svg>
+            </button>
+            <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="80">
+          </div>
+          <button class="player-btn" id="btn-nowplaying" title="Now Playing">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM8 15l4.5-6 3.5 4.51 2.5-3.01L21 15H8z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Now Playing Full Screen -->
+    <div id="now-playing-view" class="now-playing-view hidden">
+      <div class="np-backdrop" id="np-backdrop"></div>
+      <div class="np-content">
+        <div class="np-header">
+          <button class="np-close-btn" id="np-close">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z" />
+            </svg>
+          </button>
+          <span class="np-title">Now Playing</span>
+          <button class="np-menu-btn" id="np-menu">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="np-album-art-container">
+          <img class="np-album-art" id="np-album-art" src="" alt="Album Art">
+        </div>
+        <div class="np-track-info">
+          <h2 class="np-track-title" id="np-track-title">No Track</h2>
+          <p class="np-track-artist" id="np-track-artist">—</p>
+        </div>
+        <div class="np-progress">
+          <input type="range" class="np-progress-input" id="np-progress-input" min="0" max="100" value="0">
+          <div class="np-time">
+            <span id="np-current-time">0:00</span>
+            <span id="np-total-time">0:00</span>
+          </div>
+        </div>
+        <div class="np-controls">
+          <button class="np-btn" id="np-shuffle">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z" />
+            </svg>
+          </button>
+          <button class="np-btn" id="np-prev">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" />
+            </svg>
+          </button>
+          <button class="np-btn np-btn-play" id="np-play">
+            <svg viewBox="0 0 24 24" fill="currentColor" id="np-play-icon">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+          </button>
+          <button class="np-btn" id="np-next">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" />
+            </svg>
+          </button>
+          <button class="np-btn" id="np-repeat">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z" />
+            </svg>
+          </button>
+        </div>
+        <div class="np-extra-btns">
+          <button class="np-btn" id="np-like">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3z" />
+            </svg>
+          </button>
+          <button class="np-btn" id="np-lyrics-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+            </svg>
+            <span>Lyrics</span>
+          </button>
+          <button class="np-btn" id="np-eq-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M3 17v2h6v-2H3zM3 5v2h10V5H3zm10 16v-2h8v-2h-8v-2h-2v6h2zM7 9v2H3v2h4v2h2V9H7zm14 4v-2H11v2h10zm-6-4h2V7h4V5h-4V3h-2v6z" />
+            </svg>
+            <span>EQ</span>
+          </button>
+        </div>
+        <!-- Lyrics Panel -->
+        <div class="np-lyrics-panel hidden" id="np-lyrics-panel">
+          <div class="np-lyrics-content" id="np-lyrics-content">
+            <p class="lyrics-placeholder">Klik untuk mencari lirik...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Equalizer Modal -->
+    <div id="eq-modal" class="eq-modal hidden">
+      <div class="eq-modal-content">
+        <div class="eq-header">
+          <h3>Equalizer</h3>
+          <button class="eq-close" id="eq-close">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+            </svg>
+          </button>
+        </div>
+        <div class="eq-presets" id="eq-presets">
+          <button class="eq-preset active" data-preset="flat">Flat</button>
+          <button class="eq-preset" data-preset="bass">Bass+</button>
+          <button class="eq-preset" data-preset="rock">Rock</button>
+          <button class="eq-preset" data-preset="pop">Pop</button>
+          <button class="eq-preset" data-preset="jazz">Jazz</button>
+          <button class="eq-preset" data-preset="classical">Classic</button>
+        </div>
+        <div class="eq-sliders" id="eq-sliders">
+          <div class="eq-band">
+            <input type="range" class="eq-slider" data-band="0" min="-12" max="12" value="0" orient="vertical">
+            <span class="eq-label">60Hz</span>
+          </div>
+          <div class="eq-band">
+            <input type="range" class="eq-slider" data-band="1" min="-12" max="12" value="0" orient="vertical">
+            <span class="eq-label">230Hz</span>
+          </div>
+          <div class="eq-band">
+            <input type="range" class="eq-slider" data-band="2" min="-12" max="12" value="0" orient="vertical">
+            <span class="eq-label">910Hz</span>
+          </div>
+          <div class="eq-band">
+            <input type="range" class="eq-slider" data-band="3" min="-12" max="12" value="0" orient="vertical">
+            <span class="eq-label">4kHz</span>
+          </div>
+          <div class="eq-band">
+            <input type="range" class="eq-slider" data-band="4" min="-12" max="12" value="0" orient="vertical">
+            <span class="eq-label">14kHz</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Playlist Create Modal -->
+    <div id="playlist-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Playlist Baru</h3>
+        <input type="text" id="playlist-name-input" placeholder="Nama playlist..." class="modal-input">
+        <div class="modal-actions">
+          <button class="modal-btn modal-btn-cancel" id="playlist-cancel">Batal</button>
+          <button class="modal-btn modal-btn-confirm" id="playlist-confirm">Buat</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add to Playlist Modal -->
+    <div id="add-to-playlist-modal" class="modal hidden">
+      <div class="modal-content">
+        <h3>Tambah ke Playlist</h3>
+        <div id="playlist-select-list" class="playlist-select-list"></div>
+        <div class="modal-actions">
+          <button class="modal-btn modal-btn-cancel" id="atp-cancel">Tutup</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast hidden">
+      <span id="toast-msg"></span>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading" class="loading-overlay hidden">
+      <div class="loading-spinner">
+        <div class="spinner-ring"></div>
+        <p>Memuat...</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

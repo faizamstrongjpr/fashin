@@ -1,0 +1,88 @@
+/* ===== Theme Toggle (Dark Mode Switch) ===== */
+.theme-toggle-container {
+    margin-top: auto;
+    padding: 16px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.theme-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.theme-toggle-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+}
+
+.theme-toggle input:checked+.theme-toggle-slider {
+    background: var(--blue-500);
+}
+
+.theme-toggle-slider::before {
+    content: '';
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 2px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle input:checked+.theme-toggle-slider::before {
+    transform: translateX(30px);
+}
+
+.theme-icon {
+    position: absolute;
+    font-size: 14px;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.theme-icon-light {
+    left: 6px;
+    opacity: 1;
+}
+
+.theme-icon-dark {
+    right: 6px;
+    opacity: 0;
+}
+
+.theme-toggle input:checked+.theme-toggle-slider .theme-icon-light {
+    opacity: 0;
+}
+
+.theme-toggle input:checked+.theme-toggle-slider .theme-icon-dark {
+    opacity: 1;
+}
+
+.theme-toggle-label {
+    display: inline-block;
+    margin-left: 12px;
+    color: var(--text-on-dark);
+    font-size: 14px;
+    font-weight: 500;
+    vertical-align: middle;
+}

@@ -1,0 +1,134 @@
+/* ===== Equalizer ===== */
+.eq-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 500;
+}
+
+.eq-modal-content {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: 28px;
+    width: 90%;
+    max-width: 420px;
+    box-shadow: var(--shadow-xl);
+    animation: fadeInUp 0.3s var(--ease);
+}
+
+.eq-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.eq-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.eq-close {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    transition: all var(--duration) var(--ease);
+}
+
+.eq-close:hover {
+    background: var(--gray-100);
+    color: var(--text-primary);
+}
+
+.eq-close svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Presets */
+.eq-presets {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.eq-preset {
+    padding: 6px 14px;
+    border-radius: var(--radius-xl);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--gray-100);
+    border: 2px solid transparent;
+    transition: all var(--duration) var(--ease);
+}
+
+.eq-preset:hover {
+    background: var(--blue-50);
+    color: var(--accent);
+}
+
+.eq-preset.active {
+    background: var(--accent-light);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* Sliders */
+.eq-sliders {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.eq-band {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.eq-slider {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    width: 32px;
+    height: 140px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+
+.eq-slider::-webkit-slider-runnable-track {
+    width: 5px;
+    height: 100%;
+    border-radius: 3px;
+    background: linear-gradient(to top, var(--blue-200), var(--blue-100));
+}
+
+.eq-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-left: -7px;
+    box-shadow: 0 0 8px rgba(33, 150, 243, 0.3);
+}
+
+.eq-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
