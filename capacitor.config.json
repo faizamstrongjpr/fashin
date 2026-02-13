@@ -1,0 +1,9 @@
+{
+  "appId": "com.fashin.play",
+  "appName": "FASHIN Play",
+  "webDir": "dist",
+  "server": {
+    "url": "https://faizamstrong-fashin-play.hf.space",
+    "cleartext": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "fashin-play",
+  "version": "1.0.0",
+  "description": "FASHIN Play - Musik Streaming App",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/cli": "^8.1.0",
+    "@capacitor/core": "^8.1.0",
+    "@distube/ytdl-core": "^4.16.12",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "play-dl": "^1.9.7",
+    "youtube-sr": "^4.3.12",
+    "yt-search": "^2.13.1"
+  }
+}
